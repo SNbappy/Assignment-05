@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,8 @@
             <div class="bg-[#F2F0DF]">
                 <div class="flex justify-between max-w-[1200px] mx-auto pt-6 pb-16 items-center">
                     <div>
-                        <button class="font-semibold text-xl btn bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Blog</button>
+                        <button
+                            class="font-semibold text-xl btn bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Blog</button>
                     </div>
                     <div class="flex space-x-[11.5px] items-center">
                         <div><img src="assets/logo.png" alt=""></div>
@@ -27,7 +29,7 @@
                     <div class="flex space-x-3 items-center">
                         <div><img src="assets/coin.png" alt=""></div>
                         <div>
-                            <p class="text-xl font-medium">5500 BDT</p>
+                            <p class="text-xl font-medium"><span id="available-amount">5500</span> BDT</p>
                         </div>
                     </div>
                 </div>
@@ -43,89 +45,105 @@
     </header>
     <main>
         <!-- Card-1 Start -->
-         <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
+        <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
             <div class="w-1/2">
                 <img src="assets/noakhali.png" alt="">
             </div>
             <div class="w-1/2">
-                <div class="flex justify-center items-center space-x-2 bg-[rgba(17,17,17,.05)] rounded-[8px] max-w-[140px] mb-4 px-4 py-3">
+                <div
+                    class="flex justify-center items-center space-x-2 bg-[rgba(17,17,17,.05)] rounded-[8px] max-w-[140px] mb-4 px-4 py-3">
                     <div class="">
                         <img src="assets/coin.png" alt="">
                     </div>
                     <div>
-                        <p>0 BDT</p>
+                        <p><span id="amount-noakhali">0</span> BDT</p>
                     </div>
                 </div>
                 <h3 class="font-bold text-xl mb-4">Donate for Flood at Noakhali, Bangladesh</h3>
-                <p class="mb-6 font-light">The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will help provide
-                essential supplies and to those affected by this disaster. Every contribution, big or small, makes difference. Please
-                join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                <input
+                <p class="mb-6 font-light">The recent floods in Noakhali have caused significant damage to homes
+                    infrastructure. Your donation will help provide
+                    essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+                    difference. Please
+                    join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                </p>
+                <input id="input-donate-noakhali"
                     class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
                     type="text" placeholder="Write Donation Amount" min="1">
 
-                <button class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate Now</button>
+                <button id="btn-donate-noakhali" class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
+                    Now</button>
             </div>
-         </div>
+        </div>
         <!-- Card-1 end -->
         <!-- Card-2 Start -->
-         <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
+        <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
             <div class="w-1/2">
                 <img src="assets/feni.png" alt="">
             </div>
             <div class="w-1/2">
-                <div class="flex justify-center items-center space-x-2 bg-[rgba(17,17,17,.05)] rounded-[8px] max-w-[140px] mb-4 px-4 py-3">
+                <div
+                    class="flex justify-center items-center space-x-2 bg-[rgba(17,17,17,.05)] rounded-[8px] max-w-[140px] mb-4 px-4 py-3">
                     <div class="">
                         <img src="assets/coin.png" alt="">
                     </div>
                     <div>
-                        <p>600 BDT</p>
+                        <p><span id="amount-feni">600</span> BDT</p>
                     </div>
                 </div>
                 <h3 class="font-bold text-xl mb-4">Donate for Flood Relief in Feni,Bangladesh</h3>
-                <p class="mb-6 font-light">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous
-                donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this
-                calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every
-                contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
-                <input
+                <p class="mb-6 font-light">The recent floods in Feni have devastated local communities, leading to
+                    severe disruption and loss. Your generous
+                    donation will help provide immediate aid, including food, clean water, and medical supplies, to
+                    those affected by this
+                    calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this
+                    disaster. Every
+                    contribution counts towards making a real difference. Please consider donating today to assist those
+                    in urgent need.</p>
+                <input id="input-donate-feni"
                     class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
                     type="text" placeholder="Write Donation Amount" min="1">
 
-                <button class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate Now</button>
+                <button id="btn-donate-feni" class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
+                    Now</button>
             </div>
-         </div>
+        </div>
         <!-- Card-2 end -->
         <!-- Card-3 Start -->
-         <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
+        <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
             <div class="w-1/2">
                 <img src="assets/quota-protest.png" alt="">
             </div>
             <div class="w-1/2">
-                <div class="flex justify-center items-center space-x-2 bg-[rgba(17,17,17,.05)] rounded-[8px] max-w-[140px] mb-4 px-4 py-3">
+                <div
+                    class="flex justify-center items-center space-x-2 bg-[rgba(17,17,17,.05)] rounded-[8px] max-w-[140px] mb-4 px-4 py-3">
                     <div class="">
                         <img src="assets/coin.png" alt="">
                     </div>
                     <div>
-                        <p>2400 BDT</p>
+                        <p><span id="amount-movement">2400</span> BDT</p>
                     </div>
                 </div>
                 <h3 class="font-bold text-xl mb-4">Aid for Injured in the Quota Movement</h3>
-                <p class="mb-6 font-light">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support
-                is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing,
-                you help ensure that injured individuals receive the care and support they need during this challenging time. Every
-                donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a
-                donation to support these brave individuals in their time of need.</p>
-                <input
-                    class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                    type="text" placeholder="Write Donation Amount" min="1">
+                <p class="mb-6 font-light">The recent Quota movement has resulted in numerous injuries and significant
+                    hardship for many individuals. Your support
+                    is crucial in providing medical assistance, rehabilitation, and necessary supplies to those
+                    affected. By contributing,
+                    you help ensure that injured individuals receive the care and support they need during this
+                    challenging time. Every
+                    donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
+                    consider making a
+                    donation to support these brave individuals in their time of need.</p>
+                    <form id="form"><input id="input-donate-movement"
+                        class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                        type="text" placeholder="Write Donation Amount" min="1"></form>
 
-                <button class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate Now</button>
+                <button id="btn-donate-movement" class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
+                    Now</button>
             </div>
-         </div>
+        </div>
         <!-- Card-3 end -->
     </main>
     <footer class="mt-20 bg-[#F2F0DF] pb-[146px]">
-
     </footer>
     <script src="js/index.js"></script>
 </body>
