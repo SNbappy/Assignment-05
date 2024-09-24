@@ -2,6 +2,10 @@ function showModal() {
     document.getElementById('donationModal').classList.remove('hidden');
 }
 
+document.getElementById('blog').addEventListener('click', function (event) {
+    window.location.href = 'blog.html';
+})
+
 document.getElementById('btn-donation').classList.add('bg-[#B4F461]');
 document.getElementById('btn-donation').classList.add('hover:bg-[rgba(180,244,97,.7)]');
 
