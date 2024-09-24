@@ -1,3 +1,11 @@
+function showModal() {
+    document.getElementById('donationModal').classList.remove('hidden');
+}
+
+document.getElementById('closeModal').addEventListener('click', function () {
+    document.getElementById('donationModal').classList.add('hidden');
+});
+
 document.getElementById('btn-donate-noakhali').addEventListener('click', function (event) {
     const newlyAddedToNoakhali = parseFloat(document.getElementById('input-donate-noakhali').value);
     const previousAmountNoakhali = parseFloat(document.getElementById('amount-noakhali').innerText);
@@ -7,10 +15,10 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     if (newlyAddedToNoakhali < 0 || isNaN(presentAmountNoakhali))
         alert('Invalid Donation amount');
     else {
-        document.getElementById('amount-noakhali').innerText = presentAmountNoakhali;
-        document.getElementById('available-amount').innerText = totalPresentAmount;
+        document.getElementById('amount-noakhali').innerText = presentAmountNoakhali.toFixed(2);
+        document.getElementById('available-amount').innerText = totalPresentAmount.toFixed(2);
         document.getElementById('form').reset();
-
+        showModal();
     }
 })
 
@@ -23,10 +31,10 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
     if (newlyAddedToFeni < 0 || isNaN(presentAmountFeni))
         alert('Invalid Donation amount');
     else {
-        document.getElementById('amount-feni').innerText = presentAmountFeni;
-        document.getElementById('available-amount').innerText = totalPresentAmount;
+        document.getElementById('amount-feni').innerText = presentAmountFeni.toFixed(2);
+        document.getElementById('available-amount').innerText = totalPresentAmount.toFixed(2);
         document.getElementById('form').reset();
-
+        showModal();
     }
 })
 
@@ -39,8 +47,9 @@ document.getElementById('btn-donate-movement').addEventListener('click', functio
     if (newlyAddedToMovement < 0 || isNaN(presentAmountMovement))
         alert('Invalid Donation amount');
     else {
-        document.getElementById('amount-movement').innerText = presentAmountMovement;
-        document.getElementById('available-amount').innerText = totalPresentAmount;
+        document.getElementById('amount-movement').innerText = presentAmountMovement.toFixed(2);
+        document.getElementById('available-amount').innerText = totalPresentAmount.toFixed(2);
         document.getElementById('form').reset();
+        showModal();
     }
 })
