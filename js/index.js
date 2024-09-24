@@ -30,7 +30,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
         const donationMessage = `
         <div class ="border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
         <div class="">
-            <p class = "font-black text-xl">${newlyAddedToNoakhali.toFixed(2)} Taka is Donated for famine-2024 at Noakhali, Bangladesh</p>
+            <p class = "font-black text-xl">${newlyAddedToNoakhali.toFixed(2)} Taka is Donated for Flood at Noakhali, Bangladesh</p>
             <p class="mt-4 font-light">Date: ${currentDate}</p>
         </div>
         </div>
@@ -56,6 +56,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
         showModal();
         document.getElementById('form1').reset();
     }
+    const currentDate = new Date();
+
+    // Create the new donation message
+    const donationMessage = `
+        <div class ="border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
+        <div class="">
+            <p class = "font-black text-xl">${newlyAddedToFeni.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
+            <p class="mt-4 font-light">Date: ${currentDate}</p>
+        </div>
+        </div>
+    `;
+    document.getElementById('donation-history').innerHTML += donationMessage;
 })
 
 document.getElementById('btn-donate-movement').addEventListener('click', function (event) {
@@ -75,4 +87,16 @@ document.getElementById('btn-donate-movement').addEventListener('click', functio
         showModal();
         document.getElementById('form2').reset();
     }
+    const currentDate = new Date();
+
+    // Create the new donation message
+    const donationMessage = `
+        <div class ="border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
+        <div class="">
+            <p class = "font-black text-xl">${newlyAddedToMovement.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+            <p class="mt-4 font-light">Date: ${currentDate}</p>
+        </div>
+        </div>
+    `;
+    document.getElementById('donation-history').innerHTML += donationMessage;
 })
