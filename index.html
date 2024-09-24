@@ -12,40 +12,42 @@
 
 <body>
     <header>
-        <nav>
-            <!-- Navbar-1 start -->
-            <div class="bg-[#F2F0DF]">
-                <div class="flex justify-between max-w-[1200px] mx-auto pt-6 pb-16 items-center">
-                    <div>
-                        <button
-                            class="font-semibold text-xl btn bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Blog</button>
-                    </div>
-                    <div class="flex space-x-[11.5px] items-center">
-                        <div><img src="assets/logo.png" alt=""></div>
+        <div class="relative">
+            <nav class="fixed top-0 left-0 right-0">
+                <!-- Navbar-1 start -->
+                <div class="bg-[#F2F0DF] to-transparent">
+                    <div class="flex justify-between max-w-[1200px] mx-auto pt-6 pb-16 items-center">
                         <div>
-                            <p class="text-xl font-semibold">Donate Bangladesh</p>
+                            <button class="font-semibold text-xl btn bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]"><a
+                                    href="blog.html">Blog</a></button>
                         </div>
-                    </div>
-                    <div class="flex space-x-3 items-center">
-                        <div><img src="assets/coin.png" alt=""></div>
-                        <div>
-                            <p class="text-xl font-medium"><span id="available-amount">5500</span> BDT</p>
+                        <div class="flex space-x-[11.5px] items-center">
+                            <div><a href="index.html"><img src="assets/logo.png" alt=""></a></div>
+                            <div>
+                                <p class="text-xl font-semibold"><a href="index.html">Donate Bangladesh</a></p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3 items-center">
+                            <div><img src="assets/coin.png" alt=""></div>
+                            <div>
+                                <p class="text-xl font-medium"><span id="available-amount">5500</span> BDT</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Navbar-1 end -->
-            <!-- Navbar two buttons start -->
-            <div class="flex justify-center space-x-4 mt-20">
-                <button class="btn text-xl font-semibold">Donation</button>
-                <button class="btn text-xl font-medium">History</button>
-            </div>
-            <!-- Navbar two buttons end -->
-        </nav>
+                <!-- Navbar-1 end -->
+                <!-- Navbar two buttons start -->
+                <div class="flex justify-center space-x-4 mt-20">
+                    <button class="btn text-xl font-semibold">Donation</button>
+                    <button class="btn text-xl font-medium">History</button>
+                </div>
+                <!-- Navbar two buttons end -->
+            </nav>
+        </div>
     </header>
     <main>
         <!-- Card-1 Start -->
-        <div class="flex space-x-8 max-w-[1140px] mx-auto mt-8 border p-8 items-center rounded-[16px]">
+        <div class="flex space-x-8 max-w-[1140px] mx-auto mt-[300px] border p-8 items-center rounded-[16px]">
             <div class="w-1/2">
                 <img src="assets/noakhali.png" alt="">
             </div>
@@ -66,11 +68,14 @@
                     difference. Please
                     join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
-                <input id="input-donate-noakhali"
-                    class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                    type="text" placeholder="Write Donation Amount" min="1">
+                <form id="form">
+                    <input id="input-donate-noakhali"
+                        class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                        type="text" placeholder="Write Donation Amount" min="1">
+                </form>
 
-                <button id="btn-donate-noakhali" class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
+                <button id="btn-donate-noakhali"
+                    class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
                     Now</button>
             </div>
         </div>
@@ -99,11 +104,12 @@
                     disaster. Every
                     contribution counts towards making a real difference. Please consider donating today to assist those
                     in urgent need.</p>
-                <input id="input-donate-feni"
-                    class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                    type="text" placeholder="Write Donation Amount" min="1">
+                <form id="form1"><input id="input-donate-feni"
+                        class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                        type="text" placeholder="Write Donation Amount" min="1"></form>
 
-                <button id="btn-donate-feni" class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
+                <button id="btn-donate-feni"
+                    class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
                     Now</button>
             </div>
         </div>
@@ -133,17 +139,19 @@
                     donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
                     consider making a
                     donation to support these brave individuals in their time of need.</p>
-                    <form id="form"><input id="input-donate-movement"
+                <form id="form2"><input id="input-donate-movement"
                         class="w-full py-[18px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
                         type="text" placeholder="Write Donation Amount" min="1"></form>
 
-                <button id="btn-donate-movement" class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
+                <button id="btn-donate-movement"
+                    class="mt-4 btn font-semibold text-xl w-full bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Donate
                     Now</button>
             </div>
         </div>
         <!-- Card-3 end -->
         <!-- Modal -->
-        <div id="donationModal" class="hidden fixed z-50 inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
+        <div id="donationModal"
+            class="hidden fixed z-50 inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
                 <h2 class="font-bold text-4xl mb-3">Congrats!</h2>
                 <img src="assets/coin.png" alt="coin" class="mx-auto mb-4">
@@ -152,6 +160,9 @@
                 <button id="closeModal" class="btn bg-[rgba(17,17,17,.05)] font-semibold rounded">close
                     confirmation</button>
             </div>
+        </div>
+        <div id="donation-history" class="">
+
         </div>
     </main>
     <footer class="mt-20 bg-[#F2F0DF] pb-[146px]">
