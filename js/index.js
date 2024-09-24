@@ -2,6 +2,9 @@ function showModal() {
     document.getElementById('donationModal').classList.remove('hidden');
 }
 
+document.getElementById('btn-donation').classList.add('bg-[#B4F461]');
+document.getElementById('btn-donation').classList.add('hover:bg-[rgba(180,244,97,.7)]');
+
 document.getElementById('closeModal').addEventListener('click', function () {
     document.getElementById('donationModal').classList.add('hidden');
 });
@@ -28,7 +31,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 
         // Create the new donation message
         const donationMessage = `
-        <div class ="border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
+        <div class ="mb-8 border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
         <div class="">
             <p class = "font-black text-xl">${newlyAddedToNoakhali.toFixed(2)} Taka is Donated for Flood at Noakhali, Bangladesh</p>
             <p class="mt-4 font-light">Date: ${currentDate}</p>
@@ -60,7 +63,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
     // Create the new donation message
     const donationMessage = `
-        <div class ="border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
+        <div class ="mb-8 border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
         <div class="">
             <p class = "font-black text-xl">${newlyAddedToFeni.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
             <p class="mt-4 font-light">Date: ${currentDate}</p>
@@ -91,7 +94,7 @@ document.getElementById('btn-donate-movement').addEventListener('click', functio
 
     // Create the new donation message
     const donationMessage = `
-        <div class ="border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
+        <div class ="mb-8 border-2 p-8 rounded-[16px] mx-auto max-w-[1140px]">
         <div class="">
             <p class = "font-black text-xl">${newlyAddedToMovement.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
             <p class="mt-4 font-light">Date: ${currentDate}</p>
@@ -99,4 +102,23 @@ document.getElementById('btn-donate-movement').addEventListener('click', functio
         </div>
     `;
     document.getElementById('donation-history').innerHTML += donationMessage;
+})
+
+document.getElementById('btn-history').addEventListener('click', function (event) {
+    document.getElementById('donation-history').classList.remove('hidden')
+    document.getElementById('cards').classList.add('hidden');
+    document.getElementById('btn-donation').classList.remove('bg-[#B4F461]');
+    document.getElementById('btn-donation').classList.remove('hover:bg-[rgba(180,244,97,.7)]');
+    document.getElementById('btn-history').classList.add('bg-[#B4F461]');
+    document.getElementById('btn-history').classList.add('hover:bg-[rgba(180,244,97,.7)]');
+})
+
+document.getElementById('btn-donation').addEventListener('click', function (event) {
+    document.getElementById('cards').classList.remove('hidden');
+    document.getElementById('donation-history').classList.add('hidden');
+    document.getElementById('btn-history').classList.remove('bg-[#B4F461]');
+    document.getElementById('btn-history').classList.remove('hover:bg-[rgba(180,244,97,.7)]');
+    document.getElementById('btn-donation').classList.remove('hidden');
+    document.getElementById('btn-donation').classList.add('bg-[#B4F461]');
+    document.getElementById('btn-donation').classList.add('hover:bg-[rgba(180,244,97,.7)]');
 })
