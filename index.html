@@ -7,23 +7,30 @@
     <title>Donate Bangladesh</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        body{
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="flex flex-col min-h-screen">
     <header>
         <nav class="relative">
-            <div class="fixed right-0 left-0 top-0 backdrop-blur-2xl bg-opacity-80 pb-4">
+            <div class="fixed right-0 left-0 top-0 backdrop-blur-3xl bg-opacity-40 pb-4">
                 <!-- Navbar-1 start -->
-                <div class="bg-[#F2F0DF] backdrop:blur-md bg-opacity-60">
+                <div class="bg-[#F2F0DF]  backdrop-blur-3xl bg-opacity-40">
                     <div class="flex justify-between max-w-[1200px] mx-auto px-5 pt-6 pb-8 items-center">
                         <div>
-                            <button id="blog" class="font-semibold text-xl btn bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Blog</button>
+                            <button id="blog"
+                                class="font-semibold text-xl btn bg-[#B4F461] hover:bg-[rgba(180,244,97,.7)]">Blog</button>
                         </div>
                         <div class="flex space-x-[11.5px] items-center">
                             <div><a href="index.html"><img src="assets/logo.png" alt=""></a></div>
                             <div>
-                                <p class="text-xl font-semibold"><a href="index.html">Donate Bangladesh</a></p>
+                                <p class="hidden md:block text-xl font-semibold"><a href="index.html">Donate
+                                        Bangladesh</a></p>
                             </div>
                         </div>
                         <div class="flex space-x-3 items-center">
@@ -37,8 +44,7 @@
                 <!-- Navbar-1 end -->
                 <!-- Navbar two buttons start -->
                 <div class="flex justify-center space-x-4 mt-14">
-                    <button id="btn-donation"
-                        class="btn text-xl font-semibold"><span>Donation</span></button>
+                    <button id="btn-donation" class="btn text-xl font-semibold"><span>Donation</span></button>
                     <button id="btn-history" class="btn text-xl font-medium">History</button>
                 </div>
                 <!-- Navbar two buttons end -->
@@ -48,7 +54,8 @@
     <main class="m-5">
         <div id="cards">
             <!-- Card-1 Start -->
-            <div class="md:flex md:space-x-8 max-w-[1140px] mx-auto mt-[250px] border p-4 md:p-8 items-center rounded-[16px]">
+            <div
+                class="md:flex md:space-x-8 max-w-[1140px] mx-auto mt-[250px] border p-4 md:p-8 items-center rounded-[16px]">
                 <div class="md:w-1/2">
                     <img src="assets/noakhali.png" alt="">
                 </div>
@@ -158,7 +165,7 @@
         <!-- Modal -->
         <div id="donationModal"
             class="hidden fixed z-50 inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="bg-white p-6 m-5 rounded-lg shadow-lg text-center">
                 <h2 class="font-bold text-4xl mb-3">Congrats!</h2>
                 <img src="assets/coin.png" alt="coin" class="mx-auto mb-4">
                 <p class="px-20 mb-4">You Have Donated for Humankind</p>
